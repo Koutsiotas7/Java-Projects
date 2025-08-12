@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank Accounts List</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+    <h1>Bank Accounts</h1>
+    
+    <a th:href="@{/NewBank/newAccount}">Create New Account</a>
+    
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Account Number</th>
+                <th>Account Holder</th>
+                <th>Account Type</th>
+                <th>Balance</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="account : ${accounts}">
+                <td th:text="${account.id}">1</td>
+                <td th:text="${account.accountNumber}">123456</td>
+                <td th:text="${account.accountHolderName}">John Doe</td>
+                <td th:text="${account.accountType}">Savings</td>
+                <td th:text="${#numbers.formatDecimal(account.balance, 1, 'COMMA', 2, 'POINT')}">1000.00</td>
+                <td th:text="${#temporals.format(account.createdAt, 'yyyy-MM-dd HH:mm')}">2025-08-11 12:00</td>
+                <td>
+                    <a th:href="@{/NewBank/edit/{id}(id=${account.id})}">Edit</a> |
+                    <a th:href="@{/NewBank/delete/{id}(id=${account.id})}" onclick="return confirm('Are you sure?');">Delete</a>
+                </td>
+            </tr>
+            <tr th:if="${accounts.size() == 0}">
+                <td colspan="7">No accounts found.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
