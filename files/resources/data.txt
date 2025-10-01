@@ -1,4 +1,0 @@
-123,122
-some text
-Cat
-Bat
