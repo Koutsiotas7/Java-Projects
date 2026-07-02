@@ -1,0 +1,94 @@
+{
+  "A102" : {
+    "accountId" : "A102",
+    "balance" : 660.0,
+    "holderName" : "Tom Parker",
+    "transactions" : [ {
+      "type" : "DEPOSIT",
+      "amount" : 300.0,
+      "timestamp" : "2026-05-04T18:52:15.504639",
+      "details" : "Deposited to account 300.0€"
+    }, {
+      "type" : "DEPOSIT",
+      "amount" : 60.0,
+      "timestamp" : "2026-05-04T18:52:47.7440106",
+      "details" : "Deposited to account 60.0€"
+    }, {
+      "type" : "TRANSFER",
+      "amount" : 60.0,
+      "timestamp" : "2026-05-04T18:52:47.7440106",
+      "details" : "Received from A101 60.0€"
+    }, {
+      "type" : "DEPOSIT",
+      "amount" : 300.0,
+      "timestamp" : "2026-05-05T14:59:18.4292103",
+      "details" : "Deposited to account 300.0€"
+    }, {
+      "type" : "TRANSFER",
+      "amount" : 300.0,
+      "timestamp" : "2026-05-05T14:59:18.4292103",
+      "details" : "Received from A101 300.0€"
+    } ]
+  },
+  "A101" : {
+    "accountId" : "A101",
+    "balance" : 700.0,
+    "holderName" : "Jason Smith",
+    "transactions" : [ {
+      "type" : "DEPOSIT",
+      "amount" : 500.0,
+      "timestamp" : "2026-05-04T18:52:01.2284035",
+      "details" : "Deposited to account 500.0€"
+    }, {
+      "type" : "WITHDRAW",
+      "amount" : 20.0,
+      "timestamp" : "2026-05-04T18:52:23.4162216",
+      "details" : "Withdrawn from account 20.0€"
+    }, {
+      "type" : "WITHDRAW",
+      "amount" : 60.0,
+      "timestamp" : "2026-05-04T18:52:47.7440106",
+      "details" : "Withdrawn from account 60.0€"
+    }, {
+      "type" : "TRANSFER",
+      "amount" : 60.0,
+      "timestamp" : "2026-05-04T18:52:47.7440106",
+      "details" : "Transferred from A101 to A102 60.0€"
+    }, {
+      "type" : "DEPOSIT",
+      "amount" : 70.0,
+      "timestamp" : "2026-05-05T14:54:52.3912917",
+      "details" : "Deposited to account 70.0€"
+    }, {
+      "type" : "WITHDRAW",
+      "amount" : 20.0,
+      "timestamp" : "2026-05-05T14:55:20.9912318",
+      "details" : "Withdrawn from account 20.0€"
+    }, {
+      "type" : "DEPOSIT",
+      "amount" : 50.0,
+      "timestamp" : "2026-05-05T14:56:10.6472087",
+      "details" : "Deposited to account 50.0€"
+    }, {
+      "type" : "DEPOSIT",
+      "amount" : 600.0,
+      "timestamp" : "2026-05-05T14:56:27.3427766",
+      "details" : "Deposited to account 600.0€"
+    }, {
+      "type" : "WITHDRAW",
+      "amount" : 120.0,
+      "timestamp" : "2026-05-05T14:58:21.7817011",
+      "details" : "Withdrawn from account 120.0€"
+    }, {
+      "type" : "WITHDRAW",
+      "amount" : 300.0,
+      "timestamp" : "2026-05-05T14:59:18.4292103",
+      "details" : "Withdrawn from account 300.0€"
+    }, {
+      "type" : "TRANSFER",
+      "amount" : 300.0,
+      "timestamp" : "2026-05-05T14:59:18.4292103",
+      "details" : "Transferred from A101 to A102 300.0€"
+    } ]
+  }
+}
